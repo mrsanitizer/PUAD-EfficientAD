@@ -15,8 +15,8 @@ LLMs were used for debugging and code suggestions but the code is fully written 
 ## Prerequisites
 - PyTorch with CUDA, torchvision, tqdm, scikit-learn, matplotlib.
 - Datasets:
-  - ImageNet subset at `./archive/train_combined`. (have combined all the training subfolders) [Imagenet100] (https://www.kaggle.com/datasets/ambityga/imagenet100)
-  - MVTec LOCO category folders under `./mvtec_loco_anomaly_detection/<category>/`. [MVTec Loco] (https://www.mvtec.com/company/research/datasets/mvtec-loco)
+  - ImageNet subset at `./archive/train_combined`. (have combined all the training subfolders) [Imagenet100](https://www.kaggle.com/datasets/ambityga/imagenet100)
+  - MVTec LOCO category folders under `./mvtec_loco_anomaly_detection/<category>/`. [MVTec Loco](https://www.mvtec.com/company/research/datasets/mvtec-loco)
 - Checkpoint directories: `./Save_checkpoints`23211 and per-category `./model_<category>/`.
 
 ## Workflow
