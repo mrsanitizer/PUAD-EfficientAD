@@ -8,8 +8,8 @@ LLMs were used for debugging and code suggestions but the code is fully written 
 3. **PUAD Inference** – Combine picturable and unpicturable anomaly detection via Mahalanobis scoring.
 
 ## Notebooks
-- [efficientad_teacher_training_only.ipynb](efficientad_teacher_training_only.ipynb) – trains the teacher using WideResNet101_2 features, supports checkpoint resume, and saves `teacher_final.pth` with $ \mu $/$ \sigma $ statistics.
-- [EfficientAD_Algorithm1_Training.ipynb](EfficientAD_Algorithm1_Training.ipynb) – fine-tunes student + autoencoder, logs losses, computes quantiles ($q_{0.90}$, $q_{0.995}$), and writes `student.pt`, `autoencoder.pt`, `mu.pt`, `sigma.pt`, `quantile.pt`.
+- [efficientad_teacher_training_only.ipynb](efficientad_teacher_training_only.ipynb) – trains the teacher using WideResNet101_2 features, supports checkpoint resume, and saves `teacher_final.pth` with mu,sigma $ statistics.
+- [EfficientAD_Algorithm1_Training.ipynb](EfficientAD_Algorithm1_Training.ipynb) – fine-tunes student + autoencoder, logs losses, computes quantiles (q_{0.90},q_{0.995}), and writes `student.pt`, `autoencoder.pt`, `mu.pt`, `sigma.pt`, `quantile.pt`.
 - [PUAD_Implementation_2.ipynb](PUAD_Implementation_2.ipynb) – loads trained weights, fits PUAD statistics on normal data, evaluates AUROC, renders anomaly heatmaps, and profiles latency/FLOPs.
 
 ## Prerequisites
@@ -34,5 +34,5 @@ LLMs were used for debugging and code suggestions but the code is fully written 
 
 ## Notes
 - Enable `torch.backends.cudnn.benchmark = True` on CUDA devices for faster inference.
-- Quantile normalization scales anomaly maps by $0.1 \cdot \frac{M - q_a}{q_b - q_a}$ to stabilize thresholds across categories.
+- Quantile normalization scales anomaly maps
 - Efficiency profiling reports latency, throughput, parameter counts, FLOPs, and GPU memory for both EfficientAD and PUAD stages.
