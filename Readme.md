@@ -2,7 +2,7 @@
 
 ## Overview
 This workspace contains a three-stage pipeline for EfficientAD anomaly detection:
-
+LLMs were used for debugging and code suggestions but the code is fully written and inferred by us at the end.
 1. **Teacher Distillation** – Pretrain the teacher network on ImageNet features.
 2. **Algorithm 1 Training** – Distill knowledge into the student and autoencoder.
 3. **PUAD Inference** – Combine picturable and unpicturable anomaly detection via Mahalanobis scoring.
@@ -15,8 +15,8 @@ This workspace contains a three-stage pipeline for EfficientAD anomaly detection
 ## Prerequisites
 - PyTorch with CUDA, torchvision, tqdm, scikit-learn, matplotlib.
 - Datasets:
-  - ImageNet subset at `./archive/train_combined`.
-  - MVTec LOCO category folders under `./mvtec_loco_anomaly_detection/<category>/`.
+  - ImageNet subset at `./archive/train_combined`. (have combined all the training subfolders) [Imagenet100] (https://www.kaggle.com/datasets/ambityga/imagenet100)
+  - MVTec LOCO category folders under `./mvtec_loco_anomaly_detection/<category>/`. [MVTec Loco] (https://www.mvtec.com/company/research/datasets/mvtec-loco)
 - Checkpoint directories: `./Save_checkpoints`23211 and per-category `./model_<category>/`.
 
 ## Workflow
